@@ -31,7 +31,7 @@ def two():
 	print("\nRunning DNSENUM...\n\n")
 	subprocess.Popen(command).communicate()
 
-	fierce = input("Scan with fierce? y/n").lower()
+	fierce = input("Scan with fierce? y/n: ").lower()
 
 	if fierce == "y":
 		command = f"fierce --domain {target}"
@@ -48,7 +48,7 @@ def three():
 	print("\nRunning WAFW00F...\n\n")
 	subprocess.Popen(command).communicate()
 
-	lbd = input("Enable loadbalancer scaner? y/n").lower()
+	lbd = input("Enable loadbalancer scaner? y/n: ").lower()
 	if lbd == "y":
 		command = f"lbd {target}"
 		command = list(command.split())
