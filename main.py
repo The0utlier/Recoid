@@ -14,7 +14,7 @@ target = input("\nProvide target ip address: ")
 option = input("\nPress 1 for port scanning, 2 for DNS analysis, 3 for WAF detection, \n4 for OSINT or 5 run all: ")
 
 def one():
-	decoy = [socket.inet_ntoa(struct.pack('>I', random.randint(1, 0xffffffff))) for i in range(0,2)]
+	decoy = [socket.inet_ntoa(struct.pack('>I', random.randint(1, 0xffffffff))) for i in range(0,31)]
 	decoy = " ".join(decoy)
 
 	command = f"nmap -sS -A {target} -D {decoy} --dns-servers 9.9.9.9 -Pn"
