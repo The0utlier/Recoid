@@ -15,4 +15,4 @@ pip install struct
 
 # Features
 
-Includes decoy ip's for nmap, I suggest implementing proxychains as well.
+Includes decoy ips for nmap, I suggest implementing proxychains as well.
